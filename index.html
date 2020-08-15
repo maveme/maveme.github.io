@@ -5,9 +5,24 @@ title: Home
 
 {% include intro.html %}
 
+
 <section class="post-list">
   <div class="container">
-    {% for post in site.posts %}
+
+    <h2 class="category-title">Publications</h2>
+    <ul>
+    {% for post in site.publications %}
+    <li>
+      <article class="post-item">
+        <span class="post-meta date-label">{{ post.year }}</span>
+        <div class="article-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a></div>
+      </article>
+    </li>
+  {% endfor %}
+</ul>
+
+
+    <!-- {% for post in site.posts %}
       {% unless post.next %}
         <h2 class="category-title">{{ post.date | date: '%Y' }}</h2>
       {% else %}
@@ -21,7 +36,45 @@ title: Home
         <span class="post-meta date-label">{{ post.date | date: "%b %d" }}</span>
         <div class="article-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a></div>
       </article>
-    {% endfor %}
+    {% endfor %} -->
   </div>
+
+  <div class="container">
+    <h2 class="category-title">Talks</h2>
+  </div>
+
+  <div class="container">
+    <h2 class="category-title">Academic services - Paper Reviews</h2>
+    <ul>
+      <li><a class="post-link" href="https://www.journals.elsevier.com/journal-of-systems-and-software">Journal of Systems and Software (JSS)</a></li>
+      <li><a class="post-link" href="http://www.modelsconference.org">International Conference on Model Driven Engineering Languages and Systems (MODELS)</a></li>
+      <li><a class="post-link" href="http://gemoc.org/events/mle2019.html">Workshop on Modeling Language Engineering and Execution (MLE)</a></li>
+    </ul>
+
+  </div>
+
+  <div class="container">
+    <h2 class="category-title">Tools</h2>
+    <ul>
+    <article class="post-item">
+      <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
+      <li><div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/bacata">Bacatá</a></div></li>
+    </article>
+    <article class="post-item">
+      <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
+      <li><div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/kogi">Kogi</a></div></li>
+    </article>
+    <article class="post-item">
+      <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
+      <li><div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/rascal-mps">Rascal2MPS</a></div></li>
+    </article>
+  </ul>
+  </div>
+
+
+  <div class="container">
+    <h2 class="category-title">Teaching</h2>
+  </div>
+
 
 </section>

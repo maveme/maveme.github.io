@@ -1,5 +1,5 @@
 # Site settings
-title_left    : "M."
+title_left    : "Mauricio "
 title_right   : "Verano Merino" # default: ""
 description   : "Minimalist Jekyll theme for technical writing blog."
 keywords      : "Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"
@@ -12,6 +12,13 @@ twitter_username  : "MauricioVerano"
 comments_enabled  : false # if enabled (set to true), please provide your disqus_username
 disqus_shortname  : ""
 postshare_enabled : false
+
+
+collections_dir: "collections"
+
+collections:
+  publications:
+    output: true
 
 # Build settings
 permalink   : /:year/:title/
@@ -28,7 +35,7 @@ sass:
 
 # Author settings
 author:
-  name     : "M. Verano Merino"
+  name     : "Mauricio Verano Merino"
 
 plugins:
   - jekyll-sitemap
