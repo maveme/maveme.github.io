@@ -14,6 +14,8 @@ abstract: Currently, there are many enterprise applications developed using the 
 
 **[Authors](#):** {{page.authors}}
 
+**[Venue](#):** {{page.venue}}
+
 **[DOI]({{page.doi}})** 
 
 ## Abstract

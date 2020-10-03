@@ -13,3 +13,5 @@ type: Graduation project
 
 <!-- ## {{page.title}} -->
 **Authors:** {{page.authors}}
+
+**[Venue](#):** {{page.venue}}

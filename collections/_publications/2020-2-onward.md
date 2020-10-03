@@ -13,6 +13,8 @@ abstract: Read-eval-print-loops (REPLs) allow programmers to test out snippets o
 ---
 **[Authors](#):** {{page.authors}}
 
+**[Venue](#):** {{page.venue}}
+
 **[DOI]({{page.doi}})** 
 
 ## Abstract

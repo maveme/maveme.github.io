@@ -15,6 +15,8 @@ doi: http://cs.wellesley.edu/~blocksplus/2018/pdfs/blocksplus18-paper10.pdf
 
 **[Authors](#):** {{page.authors}}
 
+**[Venue](#):** {{page.venue}}
+
 **[DOI]({{page.doi}})** 
 
 ## Abstract

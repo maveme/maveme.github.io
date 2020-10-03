@@ -15,6 +15,8 @@ doi: https://programming-journal.org/2020/4/11/
 <!-- ## {{page.title}} -->
 **[Authors](#):** {{page.authors}}
 
+**[Venue](#):** {{page.venue}}
+
 **[DOI]({{page.doi}})** 
 
 ## Abstract
