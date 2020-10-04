@@ -1,8 +1,8 @@
 # Site settings
 title_left    : "Mauricio "
 title_right   : "Verano Merino" # default: ""
-description   : "Minimalist Jekyll theme for technical writing blog."
-keywords      : "Mauricio, Verano, Merino, bacata, bacatá, SLE, DSLs, blockly, kogi, rascal, languages"
+description   : "Mauricio Verano Merino."
+keywords      : "Mauricio, Verano, Merino, bacata, bacatá, SLE, DSLs, blockly, kogi, rascal, languages, football, sports, programming"
 url           : https://maveme.github.io # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "" # image uri like logo/cover image for site seo

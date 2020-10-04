@@ -5,96 +5,120 @@ title: Home
 
 {% include intro.html %}
 
-
 <section class="post-list">
   <div class="container">
-
     <h2 class="category-title">Publications</h2>
-    <ul>
     {% assign sorted = site.publications | sort: 'year' | reverse %}
+    {% assign nyear = 2000%}
     {% for post in sorted %}
-    <li>
-      <article class="post-item">
-        <span class="post-meta date-label">{{ post.year }}</span>
-        <div class="article-title">
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
-        </div>
-      </article>
-    </li>
-  {% endfor %}
-</ul>
-
-
-    <!-- {% for post in site.posts %}
-      {% unless post.next %}
-        <h2 class="category-title">{{ post.date | date: '%Y' }}</h2>
-      {% else %}
-        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-        {% if year != nyear %}
-          <h2 class="category-title">{{ post.date | date: '%Y' }}</h2>
-        {% endif %}
-      {% endunless %}
-      <article class="post-item">
-        <span class="post-meta date-label">{{ post.date | date: "%b %d" }}</span>
-        <div class="article-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a></div>
-      </article>
-    {% endfor %} -->
+    {% capture year %}{{ post.year }}{% endcapture %}
+    {% if year != nyear %}
+    {% assign nyear = year%}
+    <h3 class="category-title">{{ post.year }}</h2>
+      {% endif %}
+      <div>
+        <article class="post-item">
+          <div class="article-title">
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
+          </div>
+          <span class="post-meta date-label">{{ post.acro }}</span>
+        </article>
+      </div>
+      {% endfor %}
+      <hr>
   </div>
 
   <div class="container">
     <h2 class="category-title">Teaching</h2>
     <ul>
       <article class="post-item">
-        <li><div class="article-title">Programming for Data Science (JBI010) at <a class="post-link" href="https://tue.nl">TU/e</a></div></li>
+        <li>
+          <div class="article-title">Programming for Data Science (JBI010) at <a class="post-link"
+              href="https://tue.nl">TU/e</a></div>
+        </li>
       </article>
       <article class="post-item">
-        <li><div class="article-title">Object-Oriented Programming I (CS1) at <a class="post-link" href="https://uniandes.edu.co">Universidad de Los Andes</a></div></li>
+        <li>
+          <div class="article-title">Object-Oriented Programming I (CS1) at <a class="post-link"
+              href="https://uniandes.edu.co">Universidad de Los Andes</a></div>
+        </li>
       </article>
     </ul>
+    <hr>
   </div>
 
   <div class="container">
     <h2 class="category-title">Academic services - Paper Reviews</h2>
     <ul>
-      <li><a class="post-link" href="https://www.journals.elsevier.com/journal-of-systems-and-software">Journal of Systems and Software (JSS)</a></li>
-      <li><a class="post-link" href="http://www.modelsconference.org">International Conference on Model Driven Engineering Languages and Systems (MODELS)</a></li>
-      <li><a class="post-link" href="http://gemoc.org/events/mle2019.html">Workshop on Modeling Language Engineering and Execution (MLE)</a></li>
+      <article class="post-item">
+      <li>
+        <div class="article-title"><a class="post-link" href="https://www.journals.elsevier.com/journal-of-systems-and-software">Journal of
+          Systems and Software (JSS)</a></div>
+      </li>
+    </article>
+    <article class="post-item">
+      <li><a class="post-link" href="http://www.modelsconference.org">International Conference on Model Driven
+          Engineering Languages and Systems (MODELS)</a></li>
+        </article>
+        <article class="post-item">
+      <li><a class="post-link" href="http://gemoc.org/events/mle2019.html">Workshop on Modeling Language Engineering and
+          Execution (MLE)</a></li>
+        </article>
     </ul>
-
+    <hr>
   </div>
 
   <div class="container">
     <h2 class="category-title">Tools</h2>
     <ul>
-    <article class="post-item">
-      <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
-      <li><div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/bacata">Bacatá</a></div></li>
-    </article>
-    <article class="post-item">
-      <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
-      <li><div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/kogi">Kogi</a></div></li>
-    </article>
-    <article class="post-item">
-      <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
-      <li><div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/rascal-mps">Rascal2MPS</a></div></li>
-    </article>
-  </ul>
+      <article class="post-item">
+        <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
+        <li>
+          <div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/bacata">Bacatá</a></div>
+        </li>
+      </article>
+      <article class="post-item">
+        <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
+        <li>
+          <div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/kogi">Kogi</a></div>
+        </li>
+      </article>
+      <article class="post-item">
+        <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
+        <li>
+          <div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/rascal-mps">Rascal2MPS</a>
+          </div>
+        </li>
+      </article>
+    </ul>
+    <hr>
   </div>
 
   <div class="container">
     <h2 class="category-title">Talks</h2>
     <ul>
       <article class="post-item">
-        <li><div class="article-title">Towards Language Workbench Support for Block-Based Language at <a class="post-link" href="http://langdevcon.org/">Langdev '19</a></div></li>
+        <li>
+          <div class="article-title">Towards Language Workbench Support for Block-Based Language at <a class="post-link"
+              href="http://langdevcon.org/">Langdev '19</a></div>
+        </li>
       </article>
       <article class="post-item">
-        <li><div class="article-title">Bringing Domain-Specific Languages Closer to End-Users at <a class="post-link" href="https://www.tue.nl/en/research/research-areas/high-tech-systems/">HTSC Research Meet 'Digital Engineering'</a></div></li>
+        <li>
+          <div class="article-title">Bringing Domain-Specific Languages Closer to End-Users at <a class="post-link"
+              href="https://www.tue.nl/en/research/research-areas/high-tech-systems/">HTSC Research Meet 'Digital
+              Engineering'</a></div>
+        </li>
       </article>
       <article class="post-item">
-        <li><div class="article-title">Bacatá: A Notebook Generator for DSLs at <a class="post-link" href="https://ipa.win.tue.nl/?event=fall-days-on-models-in-software-engineering">IPA Fall Days '18</a></div></li>
+        <li>
+          <div class="article-title">Bacatá: A Notebook Generator for DSLs at <a class="post-link"
+              href="https://ipa.win.tue.nl/?event=fall-days-on-models-in-software-engineering">IPA Fall Days '18</a>
+          </div>
+        </li>
       </article>
     </ul>
+    <hr>
   </div>
 
 </section>
