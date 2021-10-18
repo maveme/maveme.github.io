@@ -18,7 +18,7 @@ preprint: /assets/pdfs/skogi-SLE21.pdf
 **[Venue](#):** {{page.venue}}
 
 <!-- **[DOI]({{page.doi}})** |  -->
-<!-- **[Preprint]({{page.preprint}})**  -->
+**[Preprint]({{page.preprint}})** 
 
 ## Abstract
 
