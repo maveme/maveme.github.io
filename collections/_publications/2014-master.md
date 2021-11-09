@@ -19,7 +19,7 @@ supervisors: Kelly Garcés and Rubby Casallas
 
 **[Venue](#):** {{page.venue}}
 
-**[DOI]({{page.doi}})** 
+**[DOI]({{page.doi}}){:target="_blank"}** 
 
 ## Abstract
 

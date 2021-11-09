@@ -19,6 +19,8 @@ collections_dir: "collections"
 collections:
   publications:
     output: true
+  students:
+    output: true
 
 # Build settings
 permalink   : /:year/:title/

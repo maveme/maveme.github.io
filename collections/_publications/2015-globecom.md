@@ -17,7 +17,7 @@ doi: https://doi.org/10.1109/GLOCOMW.2015.7414175
 
 **[Venue](#):** {{page.venue}}
 
-**[DOI]({{page.doi}})** 
+**[DOI]({{page.doi}}){:target="_blank"}** 
 
 ## Abstract
 

@@ -17,7 +17,7 @@ doi: https://doi.org/10.1109/CCGrid.2016.37
 
 **[Venue](#):** {{page.venue}}
 
-**[DOI]({{page.doi}})** 
+**[DOI]({{page.doi}}){:target="_blank"}** 
 
 ## Abstract
 {{page.abstract}}

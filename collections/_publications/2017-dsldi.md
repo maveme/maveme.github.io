@@ -16,7 +16,7 @@ abstract: Interactive notebooks, such as provided by the Jupyter platform, are g
 
 **[Venue](#):** {{page.venue}}
 
-**[DOI]({{page.doi}})** 
+**[DOI]({{page.doi}}){:target="_blank"}** 
 
 ## Abstract
 {{page.abstract}}

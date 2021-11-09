@@ -17,7 +17,7 @@ preprint: /assets/pdfs/Onward2020-preprint.pdf
 **[Venue](#):** {{page.venue}}
 
 **[DOI]({{page.doi}})** | 
-**[Preprint]({{page.preprint}})** 
+**[Preprint]({{page.preprint}}){:target="_blank"}** 
 
 ## Abstract
 

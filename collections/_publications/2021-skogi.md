@@ -21,7 +21,7 @@ award: Distinguished Artifact Award
 **[Awards 🏆](#):** {{page.award}}
 
 <!-- **[DOI]({{page.doi}})** |  -->
-**[Preprint]({{page.preprint}})** 
+**[Preprint]({{page.preprint}}){:target="_blank"}** 
 
 ## Abstract
 

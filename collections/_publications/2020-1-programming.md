@@ -17,7 +17,7 @@ doi: https://programming-journal.org/2020/4/11/
 
 **[Venue](#):** {{page.venue}}
 
-**[DOI]({{page.doi}})** 
+**[DOI]({{page.doi}}){:target="_blank"}** 
 
 ## Abstract
 Context: Computational notebooks are a contemporary style of literate programming, in which users can communicate and transfer knowledge by interleaving executable code, output, and prose in a single rich document. A Domain-Specific Language (DSL) is an artificial software language tailored for a particular application domain. Usually, DSL users are domain experts that may not have a software engineering background. As a consequence, they might not be familiar with Integrated Development Environments (IDEs). Thus, the development of tools that offer different interfaces for interacting with a DSL is relevant.
