@@ -1,192 +1,187 @@
-  ---
-  layout: default
-  title: Home
-  ---
+---
+layout: default
+title: Home
+---
 
-  {% include intro.html %}
+{% include intro.html %}
 
-  <section class="post-list">
-    <div class="container">
-      <h2 class="category-title">Publications</h2>
-      {% assign sorted = site.publications | sort: 'year' | reverse %}
-      {% assign nyear = 2000%}
-      {% for post in sorted %}
-        {% capture year %}{{ post.year }}{% endcapture %}
-        {% if year != nyear %}
-          {% assign nyear = year%}
-          <h3 class="category-title">{{ post.year }}</h2>
-        {% endif %}
-        <div>
-          <article class="post-item">
-            <div class="article-title">
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
-            </div>
-            <span class="post-meta date-label">{{ post.acro }}</span>
-          </article>
-        </div>
+<section class="post-list">
+  <div class="container">
+    <h2 class="category-title">Publications</h2>
+    {% assign sorted = site.publications | sort: 'year' | reverse %}
+    {% assign nyear = 2000%}
+    {% for post in sorted %}
+    {% capture year %}{{ post.year }}{% endcapture %}
+    {% if year != nyear %}
+    {% assign nyear = year%}
+    <h3 class="category-title">{{ post.year }}</h2>
+      {% endif %}
+      <div>
+        <article class="post-item">
+          <div class="article-title">
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
+          </div>
+          <span class="post-meta date-label">{{ post.acro }}</span>
+        </article>
+      </div>
       {% endfor %}
-        <hr>
-    </div>
-
-    <div class="container">
-      <h2 class="category-title">Teaching</h2>
-      <ul>
-        <article class="post-item">
-          <li>
-            <div class="article-title">Generic Language Technology (2IMP20) at <a class="post-link"
-                href="https://tue.nl">TU/e</a></div>
-          </li>
-        </article>
-        <article class="post-item">
-          <li>
-            <div class="article-title">Programming for Data Science (JBI010) at <a class="post-link"
-                href="https://tue.nl">TU/e</a></div>
-          </li>
-        </article>
-        <article class="post-item">
-          <li>
-            <div class="article-title">Object-Oriented Programming I (CS1) at <a class="post-link"
-                href="https://uniandes.edu.co">Universidad de Los Andes</a></div>
-          </li>
-        </article>
-      </ul>
       <hr>
-    </div>
+  </div>
 
-    <div class="container">
-      <h2 class="category-title">Current Master Students</h2>
-      <ul>
-        <article class="post-item">
-          <li>
-            <div class="article-title">Personalization of Human Machine Interface Interaction of Advanced driver-Assistance Systems<a class="post-link"
-                href="">Luigi Altamirano Mollo</a></div>
-          </li>
-        </article>
-      </ul>
-      <h2 class="category-title">Former Master Students</h2>
-      <ul>
-        <article class="post-item">
-          <li>
-            <div class="article-title">An Incremental Solver Agnostic Interface For Combinatorial Optimisation Solving <a class="post-link"
-                href="">Bart Helvert</a></div>
-          </li>
-        </article>
-        <article class="post-item">
-          <li>
-            <div class="article-title">Improving the Usability of Domain-specific Language Editors Using Artificial Intelligence <a class="post-link"
-                href="">Nandini Rajasekar</a></div>
-          </li>
-        </article>
-        <article class="post-item">
-          <li>
-            <div class="article-title">Bridging the Worlds of Textual and Projectional Language Workbenches <a class="post-link"
-                href="">Jur Bartels</a></div>
-          </li>
-        </article>
-      </ul>
-      <hr>
-    </div>
-
-    <div class="container">
-      <h2 class="category-title">Academic services - Paper Reviews</h2>
-      <ul>
-        <article class="post-item">
-          <li>
-            <div class="article-title"><a class="post-link" href="https://www.journals.elsevier.com/science-of-computer-programming">Science of Computer Programming</a></div>
-          </li>
-        </article>
-        <article class="post-item">
+  <div class="container">
+    <h2 class="category-title">Teaching</h2>
+    <ul>
+      <article class="post-item">
         <li>
-          <div class="article-title"><a class="post-link" href="https://www.journals.elsevier.com/journal-of-systems-and-software">Journal of
-            Systems and Software (JSS)</a></div>
+          <div class="article-title">Generic Language Technology (2IMP20) at <a class="post-link"
+              href="https://tue.nl">TU/e</a></div>
         </li>
       </article>
       <article class="post-item">
         <li>
-          <div class="article-title"><a class="post-link" href="https://conf.researchr.org/home/sle-2021">Conference on Software Language Engineering (SLE) - Artifact Evaluation Committee</a></div>
+          <div class="article-title">Programming for Data Science (JBI010) at <a class="post-link"
+              href="https://tue.nl">TU/e</a></div>
         </li>
       </article>
       <article class="post-item">
-        <li><a class="post-link" href="http://www.modelsconference.org">International Conference on Model Driven
-            Engineering Languages and Systems (MODELS)</a></li>
-          </article>
-          <article class="post-item">
-        <li><a class="post-link" href="http://gemoc.org/events/mle2019.html">Workshop on Modeling Language Engineering and
-            Execution (MLE)</a></li>
-          </article>
-      </ul>
-      <hr>
-    </div>
+        <li>
+          <div class="article-title">Object-Oriented Programming I (CS1) at <a class="post-link"
+              href="https://uniandes.edu.co">Universidad de Los Andes</a></div>
+        </li>
+      </article>
+    </ul>
+    <hr>
+  </div>
 
-    <div class="container">
-      <h2 class="category-title">Tools</h2>
-      <ul>
-        <article class="post-item">
-          <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
-          <li>
-            <div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/bacata">Bacatá</a></div>
-          </li>
-        </article>
-        <article class="post-item">
-          <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
-          <li>
-            <div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/kogi">Kogi</a></div>
-          </li>
-        </article>
-        <article class="post-item">
-          <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
-          <li>
-            <div class="article-title"><a class="post-link" href="https://github.com/maveme/skogi">S/Kogi</a></div>
-          </li>
-        </article>
-        <article class="post-item">
-          <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
-          <li>
-            <div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/rascal-mps">Rascal2MPS</a>
-            </div>
-          </li>
-        </article>
-      </ul>
-      <hr>
-    </div>
+  <div class="container">
+    <h2 class="category-title">Current Master Students</h2>
+    <ul>
+      <article class="post-item">
+        <li>
+          <div class="article-title">Personalization of Human Machine Interface Interaction of Advanced driver-Assistance Systems<a class="post-link"
+              href="">Luigi Altamirano Mollo</a></div>
+        </li>
+      </article>
+    </ul>
+    <h2 class="category-title">Former Master Students</h2>
+    <ul>
+      <article class="post-item">
+        <li>
+          <div class="article-title">An Incremental Solver Agnostic Interface For Combinatorial Optimisation Solving <a class="post-link"
+              href="">Bart Helvert</a></div>
+        </li>
+      </article>
+      <article class="post-item">
+        <li>
+          <div class="article-title">Improving the Usability of Domain-specific Language Editors Using Artificial Intelligence <a class="post-link"
+              href="">Nandini Rajasekar</a></div>
+        </li>
+      </article>
+      <article class="post-item">
+        <li>
+          <div class="article-title">Bridging the Worlds of Textual and Projectional Language Workbenches <a class="post-link"
+              href="">Jur Bartels</a></div>
+        </li>
+      </article>
+    </ul>
+    <hr>
+  </div>
 
-    <div class="container">
-      <h2 class="category-title">Talks</h2>
-      <ul>
-        <article class="post-item">
-          <li>
-            <div class="article-title">Language-agnostic User Interfaces. <a class="post-link"
-                href="https://www.altran.com/nl/en/">Altran</a></div>
-          </li>
+  <div class="container">
+    <h2 class="category-title">Academic services - Paper Reviews</h2>
+    <ul>
+      <article class="post-item">
+        <li>
+          <div class="article-title"><a class="post-link" href="https://www.journals.elsevier.com/science-of-computer-programming">Science of Computer Programming</a></div>
+        </li>
+      </article>
+      <article class="post-item">
+      <li>
+        <div class="article-title"><a class="post-link" href="https://www.journals.elsevier.com/journal-of-systems-and-software">Journal of
+          Systems and Software (JSS)</a></div>
+      </li>
+    </article>
+    <article class="post-item">
+      <li><a class="post-link" href="http://www.modelsconference.org">International Conference on Model Driven
+          Engineering Languages and Systems (MODELS)</a></li>
         </article>
         <article class="post-item">
-          <li>
-            <div class="article-title">Research on (grammar-based) Software Language Engineering. <a class="post-link"
-                href="">Guest Lecture - Generic language technology at TU/e</a></div>
-          </li>
+      <li><a class="post-link" href="http://gemoc.org/events/mle2019.html">Workshop on Modeling Language Engineering and
+          Execution (MLE)</a></li>
         </article>
-        <article class="post-item">
-          <li>
-            <div class="article-title">Towards Language Workbench Support for Block-Based Language at <a class="post-link"
-                href="http://langdevcon.org/">Langdev '19</a></div>
-          </li>
-        </article>
-        <article class="post-item">
-          <li>
-            <div class="article-title">Bringing Domain-Specific Languages Closer to End-Users at <a class="post-link"
-                href="https://www.tue.nl/en/research/research-areas/high-tech-systems/">HTSC Research Meet 'Digital
-                Engineering'</a></div>
-          </li>
-        </article>
-        <article class="post-item">
-          <li>
-            <div class="article-title">Bacatá: A Notebook Generator for DSLs at <a class="post-link"
-                href="https://ipa.win.tue.nl/?event=fall-days-on-models-in-software-engineering">IPA Fall Days '18</a>
-            </div>
-          </li>
-        </article>
-      </ul>
-      <hr>
-    </div>
+    </ul>
+    <hr>
+  </div>
 
-  </section>
+  <div class="container">
+    <h2 class="category-title">Tools</h2>
+    <ul>
+      <article class="post-item">
+        <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
+        <li>
+          <div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/bacata">Bacatá</a></div>
+        </li>
+      </article>
+      <article class="post-item">
+        <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
+        <li>
+          <div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/kogi">Kogi</a></div>
+        </li>
+      </article>
+      <article class="post-item">
+        <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
+        <li>
+          <div class="article-title"><a class="post-link" href="https://github.com/maveme/skogi">S/Kogi</a></div>
+        </li>
+      </article>
+      <article class="post-item">
+        <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
+        <li>
+          <div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/rascal-mps">Rascal2MPS</a>
+          </div>
+        </li>
+      </article>
+    </ul>
+    <hr>
+  </div>
+
+  <div class="container">
+    <h2 class="category-title">Talks</h2>
+    <ul>
+      <article class="post-item">
+        <li>
+          <div class="article-title">Language-agnostic User Interfaces. <a class="post-link"
+              href="https://www.altran.com/nl/en/">Altran</a></div>
+        </li>
+      </article>
+      <article class="post-item">
+        <li>
+          <div class="article-title">Research on (grammar-based) Software Language Engineering. <a class="post-link"
+              href="">Guest Lecture - Generic language technology at TU/e</a></div>
+        </li>
+      </article>
+      <article class="post-item">
+        <li>
+          <div class="article-title">Towards Language Workbench Support for Block-Based Language at <a class="post-link"
+              href="http://langdevcon.org/">Langdev '19</a></div>
+        </li>
+      </article>
+      <article class="post-item">
+        <li>
+          <div class="article-title">Bringing Domain-Specific Languages Closer to End-Users at <a class="post-link"
+              href="https://www.tue.nl/en/research/research-areas/high-tech-systems/">HTSC Research Meet 'Digital
+              Engineering'</a></div>
+        </li>
+      </article>
+      <article class="post-item">
+        <li>
+          <div class="article-title">Bacatá: A Notebook Generator for DSLs at <a class="post-link"
+              href="https://ipa.win.tue.nl/?event=fall-days-on-models-in-software-engineering">IPA Fall Days '18</a>
+          </div>
+        </li>
+      </article>
+    </ul>
+    <hr>
+  </div>
+
+</section>
