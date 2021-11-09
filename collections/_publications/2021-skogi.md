@@ -1,7 +1,7 @@
 ---
 layout: page
 country: Chicago, IL, USA
-title:  🏆 Getting Grammars into Shape for Block-based Editors
+title:  Getting Grammars into Shape for Block-based Editors
 year: 2021
 acro: SLE'21
 venue: ACM SIGPLAN International Conference on Software Language Engineering (SLE)
