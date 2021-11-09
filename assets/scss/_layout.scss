@@ -139,6 +139,11 @@ hr {
   display: block;
 
   a {
+    // color: $action-color;
+    color: $light-gray-color;
+  }
+
+  a:hover {
     color: $action-color;
   }
 
@@ -156,11 +161,15 @@ hr {
     @extend .pull-right;
   }
 
+  .teaching {
+    color: $action-color;
+  }
+
 }
 
 .post-meta {
   color: $medium-gray-color;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   display: inline-block;
   letter-spacing: 1px;
   font-size: rem(14);
