@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Personalization of Human Machine Interface Interaction of Advanced driver-Assistance Systems
+title: DSL for Describing Adaptation Rules for Automotive System Messages
 year: 2021-12
 afiliation: Eindhoven University of Technology
-name: Luigi Altamirano Mollo (Current)
+name: Luigi Altamirano Mollo
 abstract: 
-graduated: false
+graduated: true
 link:
 ---
 
