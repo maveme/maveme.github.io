@@ -1,10 +1,10 @@
 ---
 layout: page
 country: Eindhoven, The Netherlands
-title: Engineering Language-Parametric End-User Programming Environments for DSLs 🏆
+title: Engineering Language-Parametric End-User Programming Environments for DSLs
 year: 2022
 # doi: 978-90-386-5466-9
-acro: PhD Thesis
+acro: PhD Thesis 🏆
 venue: Eindhoven University of Technology
 award: VERSEN PhD Thesis Award
 authors:  Mauricio Verano Merino
