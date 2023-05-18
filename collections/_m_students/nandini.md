@@ -1,5 +1,6 @@
 ---
 layout: page
+short_title: DSLs usability with AI
 title: Improving the Usability of Domain-specific Language Editors Using Artificial Intelligence
 year: 2021-04
 afiliation: Eindhoven University of Technology

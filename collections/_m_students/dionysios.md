@@ -1,5 +1,6 @@
 ---
 layout: page
+short_title: Football and Machine Learning
 title: Capitalising on Football Data with Machine Learning
 year: 2023-01
 afiliation: Vrije Universiteit Amsterdam

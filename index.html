@@ -38,7 +38,7 @@ title: Home
       <div>
         <article class="post-item">
           <div class="article-title">
-            <a class="post-link" href="{{ student.url | prepend: site.baseurl | prepend: site.url }}">{{ student.title }}</a> <small class="block">{{ student.name }}</small> 
+            <a class="post-link" href="{{ student.url | prepend: site.baseurl | prepend: site.url }}">{{ student.short_title }}</a> <small class="block" style="font-size: 15px;">{{ student.name }}</small> 
           </div>
           <span class="post-meta date-label">{{ student.year }}</span>
         </article>

@@ -1,5 +1,6 @@
 ---
 layout: page
+short_title: Automotive DSL
 title: DSL for Describing Adaptation Rules for Automotive System Messages
 year: 2021-12
 afiliation: Eindhoven University of Technology

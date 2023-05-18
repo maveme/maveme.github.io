@@ -1,5 +1,6 @@
 ---
 layout: page
+short_title: Mining Creative Repositories
 title: Pipeline, tools and techniques for Mining Creative Repositories
 year: 2023-01
 afiliation: Vrije Universiteit Amsterdam

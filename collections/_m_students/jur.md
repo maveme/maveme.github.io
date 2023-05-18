@@ -1,5 +1,6 @@
 ---
 layout: page
+short_title: Textual and Projectional Language Workbenches
 title: Bridging the Worlds of Textual and Projectional Language Workbenches
 year: 2020-01
 afiliation: Eindhoven University of Technology
