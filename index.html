@@ -32,7 +32,21 @@ title: Home
 
   <div class="container">
     <h2 class="category-title">Students</h2>
-    {% assign sorted = site.students | sort: 'year' | reverse %}
+    <h3 class="category-title">Master</h3>
+    {% assign sorted = site.m_students | sort: 'year' | reverse %}
+    {% for student in sorted %}
+      <div>
+        <article class="post-item">
+          <div class="article-title">
+            <a class="post-link" href="{{ student.url | prepend: site.baseurl | prepend: site.url }}">{{ student.name }}</a>
+          </div>
+          <span class="post-meta date-label">{{ student.year }}</span>
+        </article>
+      </div>
+      {% endfor %}
+      <hr>
+    <h3 class="category-title">Bachelor</h3>
+    {% assign sorted = site.b_students | sort: 'year' | reverse %}
     {% for student in sorted %}
       <div>
         <article class="post-item">

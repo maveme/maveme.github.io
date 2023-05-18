@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Capitalising on Football Data with Machine Learning
+title: Towards Version Control for Creative Coding
 year: 2023
 afiliation: Vrije Universiteit Amsterdam
-name: Capitalising on Football Data with Machine Learning
+name: Maximilian Mayer
 abstract: TBD
 graduated: false
-link:
+# link:
 ---
 
 ---
@@ -14,7 +14,7 @@ link:
 
 **[Afiliation](#):** {{page.afiliation}}
 
-**[Thesis](#):** [PDF]({{page.link}}){:target="_blank"}
+<!-- **[Thesis](#):** [PDF]({{page.link}}){:target="_blank"} -->
 
 ## Abstract
 

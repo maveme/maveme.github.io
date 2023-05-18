@@ -19,7 +19,9 @@ collections_dir: "collections"
 collections:
   publications:
     output: true
-  students:
+  m_students:
+    output: true
+  b_students:
     output: true
 
 # Build settings

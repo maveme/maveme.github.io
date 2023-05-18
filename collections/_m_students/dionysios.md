@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Pipeline, tools and techniques for Mining Creative Repositories
+title: Capitalising on Football Data with Machine Learning
 year: 2023
 afiliation: Vrije Universiteit Amsterdam
-name: Behnam Bozorgi
+name: Capitalising on Football Data with Machine Learning
 abstract: TBD
 graduated: false
-link:
+# link:
 ---
 
 ---
@@ -14,7 +14,7 @@ link:
 
 **[Afiliation](#):** {{page.afiliation}}
 
-**[Thesis](#):** [PDF]({{page.link}}){:target="_blank"}
+<!-- **[Thesis](#):** [PDF]({{page.link}}){:target="_blank"} -->
 
 ## Abstract
 

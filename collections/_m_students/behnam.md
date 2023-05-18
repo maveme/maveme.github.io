@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Towards Version Control for Creative Coding
+title: Pipeline, tools and techniques for Mining Creative Repositories
 year: 2023
 afiliation: Vrije Universiteit Amsterdam
-name: Maximilian Mayer
+name: Behnam Bozorgi
 abstract: TBD
 graduated: false
-link:
+# link:
 ---
 
 ---
@@ -14,7 +14,7 @@ link:
 
 **[Afiliation](#):** {{page.afiliation}}
 
-**[Thesis](#):** [PDF]({{page.link}}){:target="_blank"}
+<!-- **[Thesis](#):** [PDF]({{page.link}}){:target="_blank"} -->
 
 ## Abstract
 
