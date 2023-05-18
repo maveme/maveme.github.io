@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Capitalising on Football Data with Machine Learning
-year: 2023
+year: 2023-01
 afiliation: Vrije Universiteit Amsterdam
 name: Capitalising on Football Data with Machine Learning
 abstract: TBD

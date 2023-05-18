@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Pipeline, tools and techniques for Mining Creative Repositories
-year: 2023
+year: 2023-01
 afiliation: Vrije Universiteit Amsterdam
 name: Behnam Bozorgi
 abstract: TBD
