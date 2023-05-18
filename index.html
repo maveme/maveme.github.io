@@ -38,13 +38,13 @@ title: Home
       <div>
         <article class="post-item">
           <div class="article-title">
-            <a class="post-link" href="{{ student.url | prepend: site.baseurl | prepend: site.url }}">{{ student.name }}</a>
+            <a class="post-link" href="{{ student.url | prepend: site.baseurl | prepend: site.url }}"><small>{{ student.title }}</small> {{ student.name }}</a>
           </div>
           <span class="post-meta date-label">{{ student.year }}</span>
         </article>
       </div>
       {% endfor %}
-    <h3 class="category-title">Bachelor</h3>
+    <!-- <h3 class="category-title">Bachelor</h3> -->
     {% assign sorted = site.b_students | sort: 'year' | reverse %}
     {% for student in sorted %}
       <div>
@@ -70,6 +70,11 @@ title: Home
       <article class="post-item">
         <li>
           <div class="article-title"><a class="post-link" href="https://conf.researchr.org/home/plnl-2023">Workshop on Programming Languages in The Netherlands</a></div>
+        </li>
+      </article>
+      <article class="post-item">
+        <li>
+          <div class="article-title"><a class="post-link" href="https://www.versen.nl">VERSEN - Chair Working Group: Community Events</a></div>
         </li>
       </article>
     <h3 class="category-title">Reviewer</h2>
