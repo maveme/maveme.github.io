@@ -1,5 +1,6 @@
 ---
 layout: page
+short_title: Digital Twins in Automotive
 title: Digital Twins in the Automotive Domain
 year: 2023-01
 afiliation: Vrije Universiteit Amsterdam

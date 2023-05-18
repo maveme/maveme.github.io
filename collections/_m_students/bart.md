@@ -1,5 +1,6 @@
 ---
 layout: page
+short_title: Solver Agnostic Interface For Combinatorial Optimisation
 title: An Incremental Solver Agnostic Interface For Combinatorial Optimisation Solving
 year: 2021-01
 afiliation: Eindhoven University of Technology & Siemens Industry Software (SISW)

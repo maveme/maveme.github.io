@@ -1,5 +1,6 @@
 ---
 layout: page
+short_title: Towards Version Control for Creative Coding
 title: Towards Version Control for Creative Coding
 year: 2023-01
 afiliation: Vrije Universiteit Amsterdam
