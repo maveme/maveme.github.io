@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Capitalising on Football Data with Machine Learning
+title: Digital Twins in the Automotive Domain
 year: 2023-01
 afiliation: Vrije Universiteit Amsterdam
-name: Dionysios Kyriazopoulos
+name: André Silva
 abstract: TBD
 graduated: false
 # link:
