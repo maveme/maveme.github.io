@@ -1,8 +1,8 @@
 # Site settings
 title_left    : "Mauricio "
 title_right   : "Verano Merino" # default: ""
-description   : ""
-keywords      : "creative-coding, creative coding, Mauricio, Verano, Merino, bacata, bacatá, SLE, DSLs, blockly, kogi, rascal, languages, football, sports, programming"
+description   : "Personal website of Mauricio Verano Merino"
+keywords      : "football analytics, computer vision, sports and technology, creative-coding, creative coding, Mauricio, Verano, Merino, bacata, bacatá, SLE, DSLs, blockly, kogi, rascal, languages, football, sports, programming"
 url           : https://maveme.github.io # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "" # image uri like logo/cover image for site seo
@@ -45,6 +45,7 @@ plugins:
   - jekyll-sitemap
   - bourbon
   - jekyll-paginate
+  - jekyll-seo-tag
 
 # navbar pages
 navbar:
