@@ -6,7 +6,8 @@ year: 2023-01
 afiliation: Vrije Universiteit Amsterdam
 name: Maximilian Mayer
 abstract: TBD
-graduated: false
+graduated: true
+award: 3rd place VERSEN Master Thesis Award
 # link:
 ---
 
@@ -14,6 +15,8 @@ graduated: false
 **[Name](#):** {{page.name}}
 
 **[Afiliation](#):** {{page.afiliation}}
+
+**[Awards 🏆](#):** {{page.award}}
 
 <!-- **[Thesis](#):** [PDF]({{page.link}}){:target="_blank"} -->
 
