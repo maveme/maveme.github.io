@@ -17,6 +17,8 @@ postshare_enabled : false
 collections_dir: "collections"
 
 collections:
+  projects:
+    output: true
   publications:
     output: true
   m_students:
