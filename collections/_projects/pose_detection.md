@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Goalkeeper Pose Detection: from 2D detections to 3D models
+title: Goalkeeper Pose Detection - from 2D detections to 3D models
 level: Bachelor
 authors: Mauricio Verano Merino, Idsart Kingma (Faculty of Behavioural and Movement Sciences)
 type: Graduation project
