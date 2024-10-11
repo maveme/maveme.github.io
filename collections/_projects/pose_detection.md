@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Goalkeeper Pose Detection from 2D detections to 3D models
+title: Goalkeeper Pose Detection {% raw %}:{% endraw %} from 2D detections to 3D models
 level: Bachelor
 authors: Mauricio Verano Merino
 type: Graduation project
@@ -9,10 +9,9 @@ abstract: The research project aims to develop a system for goalkeepers that tra
 ---
 
 ---
-
-## {{page.title}}
-**Supervisor:** {{page.authors}}
 **Degree level:** {{page.level}}
+
+**Supervisor:** {{page.authors}}
 
 
 ## Problem description
