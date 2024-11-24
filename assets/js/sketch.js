@@ -1,6 +1,6 @@
 let walker;
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   walker = new Walker(width/2, height/2);
   background(255);
 }
@@ -15,4 +15,8 @@ function draw() {
   if (walker.pos.y > height || walker.pos.y < 0) {
     walker.vel.y = walker.vel.y * (-1); 
   }
+}
+
+function windowResized() {
+      resizeCanvas(windowWidth, windowHeight);
 }
