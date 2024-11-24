@@ -5,5 +5,9 @@
 @import "main";
 
 canvas {
+      position: absolute; /* Position canvas absolutely */
+      top: 0;             /* Align canvas to the top */
+      left: 0;            /* Align canvas to the left */
+      z-index: -1;        /* Place canvas behind other elements */
       display: block; /* Prevent canvas from being treated as inline */
 }
