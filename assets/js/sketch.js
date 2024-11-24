@@ -1,7 +1,7 @@
 let walker;
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  canvas.style('z-index', '-1');
+//   canvas.style('z-index', '-1');
   walker = new Walker(width/2, height/2);
   background(255);
 }
