@@ -4,12 +4,6 @@
 @charset "utf-8";
 @import "main";
 
-body, html {
-      margin: 0;       /* Remove default margins */
-      padding: 0;      /* Remove default padding */
-      overflow: hidden; /* Prevent scrollbars from appearing */
-    }
-    
 canvas {
       display: block; /* Prevent canvas from being treated as inline */
 }
