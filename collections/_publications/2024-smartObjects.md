@@ -1,7 +1,7 @@
 ---
 layout: page
 country: Pasadena, CA, USA
-title: Programming Smart Objects How Young Learners’ Programming Skills, Attitudes, and Perception Are Influenced
+title: "Programming Smart Objects: How Young Learners’ Programming Skills, Attitudes, and Perception Are Influenced"
 year: 2024
 doi: https://doi.org/10.1145/3689493.3689982
 acro: SPLASH-E'24
