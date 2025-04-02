@@ -1,18 +1,46 @@
 # Site settings
 title_left    : "Mauricio "
 title_right   : "Verano Merino" # default: ""
-description   : "Personal website of Mauricio Verano Merino"
-keywords      : "football analytics, computer vision, sports and technology, creative-coding, creative coding, Mauricio, Verano, Merino, bacata, bacatá, SLE, DSLs, blockly, kogi, rascal, languages, football, sports, programming"
+description   : "Personal website of Mauricio Verano Merino - Researcher in Software Language Engineering, End-User Programming, and Football Analytics"
+keywords      : "football analytics, computer vision, sports and technology, creative-coding, creative coding, Mauricio, Verano, Merino, bacata, bacatá, SLE, DSLs, blockly, kogi, rascal, languages, football, sports, programming, software engineering, research"
 url           : https://maveme.github.io # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "" # image uri like logo/cover image for site seo
 
+# SEO settings
+author:
+  name     : "Mauricio Verano Merino"
+  email    : "" # Add your email if you want to be contactable
+  bio      : "Researcher in Software Language Engineering, End-User Programming, and Football Analytics"
+  location : "Netherlands"
+  avatar   : "" # Add your avatar image URL
+  urls:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/maveme"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/mauricio-verano-merino/"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID"
+
+# Social media
+social:
+  twitter:
+    username: "MauricioVerano"
+    card: "summary_large_image"
+  linkedin:
+    username: "mauricio-verano-merino"
+  github:
+    username: "maveme"
+
+# Analytics
 google_analytics  : UA-175532612-1
-twitter_username  : "MauricioVerano"
+# twitter_username  : "MauricioVerano"
 comments_enabled  : false # if enabled (set to true), please provide your disqus_username
 disqus_shortname  : ""
 postshare_enabled : false
-
 
 collections_dir: "collections"
 
@@ -38,10 +66,6 @@ destination : ./_site
 sass:
   sass_dir  : assets/scss
   style     : compressed # expanded
-
-# Author settings
-author:
-  name     : "Mauricio Verano Merino"
 
 plugins:
   - jekyll-sitemap
