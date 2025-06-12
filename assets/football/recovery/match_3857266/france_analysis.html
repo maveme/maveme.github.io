@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>France vs. Denmark - Match Analysis</title>
+                
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #1d3557;
+            border-bottom: 2px solid #457b9d;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h2 {
+            color: #1d3557;
+            margin-top: 25px;
+        }
+        h3 {
+            color: #457b9d;
+            margin-top: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            table-layout: auto;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            white-space: nowrap;
+        }
+        th {
+            background-color: #457b9d;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .positive {
+            color: #2a9d8f;
+            font-weight: bold;
+        }
+        .negative {
+            color: #e63946;
+            font-weight: bold;
+        }
+        .highlight {
+            background-color: #ffffd9;
+        }
+        .highlight-bh {
+            background-color: #e8f5e9;
+        }
+        .summary-box {
+            background-color: #e1f3f8;
+            border-left: 5px solid #457b9d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .event-card {
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+        }
+        .chart-container {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            height: 400px;
+            position: relative;
+        }
+        /* Help button styles */
+        .help-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #457b9d;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .help-button:hover {
+            background-color: #1d3557;
+        }
+        .help-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1001;
+            align-items: center;
+            justify-content: center;
+        }
+        .help-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+        }
+        .help-content h2 {
+            color: #1d3557;
+            margin-top: 0;
+        }
+        .help-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+        .help-close:hover {
+            outline: none;
+            box-shadow: none;
+            background: transparent;
+            color: #666;
+        }
+        .term-definition {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .term-definition h3 {
+            margin-bottom: 5px;
+        }
+        .team-flag {
+            font-size: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        /* Remove table wrapper constraints */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+        }
+        /* Make tables responsive but use full width */
+        @media screen and (max-width: 1200px) {
+            .table-wrapper {
+                overflow-x: scroll;
+            }
+        }
+        .no-data {
+            color: #999;
+            font-style: italic;
+            background-color: #f9f9f9;
+        }
+    </style>
+    
+                
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get modal elements
+            var helpModal = document.getElementById('helpModal');
+            var helpBtn = document.getElementById('helpBtn');
+            var closeBtn = document.getElementById('closeHelp');
+            
+            // Open modal when help button is clicked
+            helpBtn.onclick = function() {
+                helpModal.style.display = 'flex';
+            }
+            
+            // Close modal when close button is clicked
+            closeBtn.onclick = function() {
+                helpModal.style.display = 'none';
+            }
+            
+            // Close modal when clicking outside the content
+            window.onclick = function(event) {
+                if (event.target == helpModal) {
+                    helpModal.style.display = 'none';
+                }
+            }
+        });
+    </script>
+    
+            </head>
+            <body style="max-width: 100%; width: 100%;">
+                <h1><span class="team-flag">🇫🇷</span> France vs <span class="team-flag">🇩🇰</span> Denmark - Match Analysis</h1>
+                <p>Match ID: 3857266</p>
+                
+                <div class="summary-box">
+                    <h3>Key Findings</h3>
+                <p>No significant findings were identified for this match.</p>
+
+                    </div>
+
+                    <h2>Recovery Times - Match Level</h2>
+                
+                    <h3>Normality Test Results</h3>
+                    <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Event Type</th>
+                            <th>Sample Size</th>
+                            <th>Shapiro-Wilk Statistic</th>
+                            <th>p-value</th>
+                            <th>Normal Distribution</th>
+                        </tr>
+                
+                                <tr>
+                                    <td>Substitutions</td>
+                                    <td>20</td>
+                                    <td>0.8250</td>
+                                    <td>0.002091</td>
+                                    <td class="negative">No</td>
+                                </tr>
+                                    
+                                <tr>
+                                    <td>Injuries</td>
+                                    <td>12</td>
+                                    <td>0.7122</td>
+                                    <td>0.001108</td>
+                                    <td class="negative">No</td>
+                                </tr>
+                                    
+                                <tr>
+                                    <td>Yellow Cards</td>
+                                    <td>9</td>
+                                    <td>0.7333</td>
+                                    <td>0.003472</td>
+                                    <td class="negative">No</td>
+                                </tr>
+                                    
+                    </table>
+                    </div>
+                
+                    <h3>Mann-Whitney U Test Results</h3>
+                    <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Event Type</th>
+                            <th>Before Sample Size</th>
+                            <th>After Sample Size</th>
+                            <th>Mann-Whitney U</th>
+                            <th>p-value</th>
+                            <th>Significant Difference</th>
+                            <th>BH Corrected p-value</th>
+                            <th>Significant After BH</th>
+                            <th>Cliff's Delta</th>
+                            <th>CI Lower</th>
+                            <th>CI Upper</th>
+                            <th>Effect Size</th>
+                            <th>Explanation</th>
+                        </tr>
+                
+                                        <tr >
+                                            <td>Substitutions</td>
+                                            <td>7</td>
+                                            <td>13</td>
+                                            <td>60.0000</td>
+                                            <td>0.264728</td>
+                                            <td class="negative">No</td>
+                                            <td>0.264728</td>
+                                            <td class="negative">No</td>
+                                            <td>0.3187</td>
+                                            <td>-0.2967</td>
+                                            <td>0.8687</td>
+                                            <td>Small</td>
+                                            <td>No significant difference (CI includes 0)</td>
+                                        </tr>
+                                    
+                    </table>
+                    </div>
+                
+                    <h3>Recovery Impact Analysis</h3>
+                    <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Event Type</th>
+                            <th>Avg TRB Before (s)</th>
+                            <th>Avg TRB After (s)</th>
+                            <th>Faster After Event</th>
+                        </tr>
+                
+                                <tr >
+                                    <td>Substitutions</td>
+                                    <td>147.90</td>
+                                    <td>65.44</td>
+                                    <td class="positive">Yes</td>
+                                </tr>
+                                
+                    </table>
+                    </div>
+                
+                    <div class="footer">
+                    </div>
+                    
+                    
+        <!-- Help Button -->
+        <button id="helpBtn" class="help-button">?</button>
+        
+        <!-- Help Modal -->
+        <div id="helpModal" class="help-modal">
+            <div class="help-content">
+                <span id="closeHelp" class="help-close">&times;</span>
+                <h2>Football Analysis Guide</h2>
+                <p>This guide explains the statistical terms and analysis used in this dashboard.</p>
+                
+                <div class="term-definition">
+                    <h3>TRB (Time to Recover Ball)</h3>
+                    <p>The time (in seconds) it takes for a team to regain possession after losing the ball. Lower times indicate better defensive pressing or recovery.</p>
+                </div>
+                
+                <div class="term-definition">
+                    <h3>Event Types</h3>
+                    <p><strong>All Goals:</strong> Includes goals scored by either team</p>
+                    <p><strong>Substitutions:</strong> Player replacements during the match</p>
+                    <p><strong>Tactical Shifts:</strong> Changes in team formation or strategy</p>
+                    <p><strong>Injuries:</strong> Stoppages due to player injuries</p>
+                    <p><strong>Yellow/Red Cards:</strong> Disciplinary actions by the referee</p>
+                </div>
+                
+                <div class="term-definition">
+                    <h3>Shapiro-Wilk Test</h3>
+                    <p>A statistical test to check if data follows a normal distribution (bell curve).</p>
+                    <p><strong>p-value:</strong> If this number is less than 0.05, the data is NOT normally distributed.</p>
+                    <p><strong>What it means for coaching:</strong> Non-normal data suggests there are inconsistencies in recovery times - some very fast recoveries and some very slow ones, rather than most being around the average.</p>
+                </div>
+                
+                <div class="term-definition">
+                    <h3>Mann-Whitney U Test</h3>
+                    <p>A statistical test that compares recovery times before and after events to see if there's a significant difference.</p>
+                    <p><strong>p-value:</strong> If this number is less than 0.05, there IS a significant difference in recovery times before vs. after the event.</p>
+                    <p><strong>BH Corrected p-value:</strong> When multiple tests are performed, the Benjamini-Hochberg (BH) correction adjusts p-values to control the false discovery rate. This helps avoid finding false significant results.</p>
+                    <p><strong>Significant After BH:</strong> Shows whether the result remains significant after applying the BH correction. This is a more conservative and reliable indicator of true effects.</p>
+                    <p><strong>Cliff's Delta:</strong> Measures the size of the effect:</p>
+                    <ul>
+                        <li>Negligible: Less than 0.147</li>
+                        <li>Small: 0.147 to 0.33</li>
+                        <li>Medium: 0.33 to 0.474</li>
+                        <li>Large: Greater than 0.474</li>
+                    </ul>
+                    <p><strong>Direction of Cliff's Delta:</strong></p>
+                    <ul>
+                        <li><strong>Positive values (+):</strong> Recovery times BEFORE the event are generally higher than after the event. This means players take LESS time to recover the ball following the event (faster recovery).</li>
+                        <li><strong>Negative values (-):</strong> Recovery times BEFORE the event are generally lower than after the event. This means players take MORE time to recover the ball following the event (slower recovery).</li>
+                    </ul>
+                    <p><strong>Confidence Interval (CI):</strong></p>
+                    <ul>
+                        <li>The CI Lower and CI Upper values show the 95% confidence interval for Cliff's Delta.</li>
+                        <li>This means we're 95% confident the true effect size is somewhere between these two values.</li>
+                        <li><strong>For Coaches:</strong> If the CI includes zero (e.g., -0.1 to +0.2), the effect might not be reliable. If it excludes zero (e.g., +0.1 to +0.3), you can be more confident in the effect's direction.</li>
+                        <li>Wider intervals indicate less certainty about the exact effect size.</li>
+                        <li>Narrower intervals indicate more reliable estimates of the true effect.</li>
+                    </ul>
+                    <p><strong>What it means for coaching:</strong> Focus on results that are significant after BH correction, as these are the most reliable findings. These indicate events that truly affect your team's recovery patterns.</p>
+                </div>
+                
+                <div class="term-definition">
+                    <h3>Recovery Impact Analysis</h3>
+                    <p>Shows whether teams recover the ball faster or slower after specific events.</p>
+                    <p><strong>Avg TRB Before/After:</strong> Average recovery time in seconds before and after events</p>
+                    <p><strong>Faster After Event:</strong> "Yes" means recovery was quicker after the event</p>
+                    <p><strong>Significant Impact:</strong> "Yes" means the difference is statistically meaningful</p>
+                    <p><strong>What it means for coaching:</strong> Focus on events with significant impacts. If recovery is faster after goals, your team might be more motivated. If slower after cards, you may need to adjust tactics after disciplinary actions.</p>
+                </div>
+                
+                <div class="term-definition">
+                    <h3>Highlighted Rows</h3>
+                    <p>Yellow highlighted rows indicate statistically significant findings that deserve special attention from coaching staff.</p>
+                </div>
+                
+                <div class="term-definition">
+                    <h3>How To Use This Analysis</h3>
+                    <p><strong>For Training:</strong> Focus on improving recovery times after events where your team slows down</p>
+                    <p><strong>For Tactics:</strong> Consider formation changes after events that negatively impact recovery</p>
+                    <p><strong>For Psychology:</strong> Address mental aspects if certain events (like conceding goals) consistently slow recovery</p>
+                    <p><strong>For Opposition Analysis:</strong> Look for patterns in how opponents' recovery times change after events</p>
+                </div>
+            </div>
+        </div>
+        
+                </body>
+                </html>
+                
