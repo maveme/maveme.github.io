@@ -3,7 +3,7 @@ layout: page
 country: Dublin, Ireland
 title: Semi-Automatic Estimation of Body Orientation in Football
 year: 2025
-doi: 10.1145/3728423.3759407
+doi: https://doi.org/10.1145/3728423.3759407
 acro: MMSports'25
 venue: ACM Workshop on Multimedia Content Analysis in Sports
 authors:  Sobhaan Ul Husan, Mauricio Verano Merino, Elixabete Sarasola Nieto
