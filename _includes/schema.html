@@ -1,0 +1,90 @@
+{% comment %}
+  Person Schema
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author.name }}",
+  "url": "{{ site.url }}",
+  "sameAs": [
+    "https://github.com/{{ site.social.github.username }}",
+    "https://linkedin.com/in/{{ site.social.linkedin.username }}",
+    "https://twitter.com/{{ site.social.twitter.username }}"
+  ],
+  "jobTitle": "Researcher",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Eindhoven University of Technology",
+    "url": "https://www.tue.nl"
+  },
+  "description": "{{ site.author.bio }}",
+  "image": "{{ site.author.avatar }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "{{ site.author.location }}"
+  }
+}
+</script>
+
+{% comment %}
+  Organization Schema
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Eindhoven University of Technology",
+  "url": "https://www.tue.nl",
+  "logo": "https://www.tue.nl/favicon.ico",
+  "sameAs": [
+    "https://www.linkedin.com/school/eindhoven-university-of-technology/",
+    "https://twitter.com/TUeindhoven"
+  ]
+}
+</script>
+
+{% comment %}
+  Website Schema
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.title_left }}{{ site.title_right }}",
+  "url": "{{ site.url }}",
+  "description": "{{ site.description }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}"
+  }
+}
+</script>
+
+{% comment %}
+  ScholarlyArticle Schema for Publications
+{% endcomment %}
+{% if page.layout == 'publication' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "{{ page.title }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}"
+  },
+  "datePublished": "{{ page.year }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ page.publisher }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ page.publisher_logo }}"
+    }
+  },
+  "description": "{{ page.description }}",
+  "url": "{{ site.url }}{{ page.url }}"
+}
+</script>
+{% endif %} 

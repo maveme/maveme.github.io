@@ -1,0 +1,27 @@
+{% if page.layout == 'project' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "{{ page.title }}",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}"
+  },
+  "description": "{{ page.description }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+  "dateModified": "{{ page.last_modified_at | date: '%Y-%m-%d' }}",
+  "version": "{{ page.version }}",
+  "downloadUrl": "{{ page.github_url }}",
+  "softwareHelp": "{{ page.documentation_url }}"
+}
+</script>
+{% endif %} 

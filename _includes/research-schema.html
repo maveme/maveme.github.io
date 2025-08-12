@@ -1,0 +1,99 @@
+{% comment %}
+  Research Areas Schema
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ResearchField",
+      "name": "Software Language Engineering",
+      "description": "Research in the design, implementation, and application of domain-specific languages and language workbenches",
+      "url": "{{ site.url }}/research#sle",
+      "keywords": ["Domain-Specific Languages", "Language Workbenches", "Language Engineering", "DSLs", "SLE"],
+      "relatedTo": [
+        {
+          "@type": "ResearchField",
+          "name": "Programming Languages",
+          "url": "https://en.wikipedia.org/wiki/Programming_language"
+        },
+        {
+          "@type": "ResearchField",
+          "name": "Software Engineering",
+          "url": "https://en.wikipedia.org/wiki/Software_engineering"
+        }
+      ]
+    },
+    {
+      "@type": "ResearchField",
+      "name": "Computer Vision",
+      "description": "Research in computer vision and image processing techniques",
+      "url": "{{ site.url }}/research#cv",
+      "keywords": ["Computer Vision", "Image Processing", "Machine Learning", "Deep Learning"],
+      "relatedTo": [
+        {
+          "@type": "ResearchField",
+          "name": "Artificial Intelligence",
+          "url": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+        },
+        {
+          "@type": "ResearchField",
+          "name": "Machine Learning",
+          "url": "https://en.wikipedia.org/wiki/Machine_learning"
+        }
+      ]
+    },
+    {
+      "@type": "ResearchField",
+      "name": "Football Analytics",
+      "description": "Research in data analysis and visualization for football (soccer) analytics",
+      "url": "{{ site.url }}/research#football",
+      "keywords": ["Football Analytics", "Sports Analytics", "Data Visualization", "Sports Technology"],
+      "relatedTo": [
+        {
+          "@type": "ResearchField",
+          "name": "Sports Science",
+          "url": "https://en.wikipedia.org/wiki/Sports_science"
+        },
+        {
+          "@type": "ResearchField",
+          "name": "Data Science",
+          "url": "https://en.wikipedia.org/wiki/Data_science"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+{% comment %}
+  Research Projects Schema
+{% endcomment %}
+{% if page.layout == 'project' and page.research_area %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchProject",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "funder": {
+    "@type": "Organization",
+    "name": "{{ page.funder }}",
+    "url": "{{ page.funder_url }}"
+  },
+  "researchArea": {
+    "@type": "ResearchField",
+    "name": "{{ page.research_area }}",
+    "url": "{{ site.url }}/research#{{ page.research_area | downcase | replace: ' ', '-' }}"
+  },
+  "startDate": "{{ page.start_date }}",
+  "endDate": "{{ page.end_date }}",
+  "keywords": {{ page.keywords | jsonify }},
+  "contributor": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}"
+  }
+}
+</script>
+{% endif %} 
