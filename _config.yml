@@ -1,8 +1,8 @@
 # Site settings
 title_left    : "Mauricio "
 title_right   : "Verano Merino" # default: ""
-description   : "Personal website of Mauricio Verano Merino - Researcher in Software Language Engineering, End-User Programming, and Football Analytics"
-keywords      : "football analytics, computer vision, sports and technology, creative-coding, creative coding, Mauricio, Verano, Merino, bacata, bacatá, SLE, DSLs, blockly, kogi, rascal, languages, football, sports, programming, software engineering, research"
+description   : "Personal website of Mauricio Verano Merino - Assistant Professor in Computer Science, founder of the Sports Intelligence Lab."
+keywords      : "football analytics, computer vision, sports and technology, creative-coding, creative coding, Mauricio, Verano, Merino, bacata, bacatá, SLE, DSLs, blockly, kogi, rascal, languages, football, sports, programming, software engineering, research, Sports Intelligence Lab, Sports Analytics, VU Amsterdam, Software Art Conservation, Digital Art Preservation"
 url           : https://maveme.github.io # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "" # image uri like logo/cover image for site seo
@@ -11,7 +11,7 @@ cover         : "" # image uri like logo/cover image for site seo
 author:
   name     : "Mauricio Verano Merino"
   email    : "" # Add your email if you want to be contactable
-  bio      : "Researcher in Software Language Engineering, End-User Programming, and Football Analytics"
+  bio      : "Assistant Professor in Computer Science at VU Amsterdam. Researcher in Software Language Engineering, Sports Analytics, and Conservation of Software-based Artworks."
   location : "Netherlands"
   avatar   : "" # Add your avatar image URL
   urls:

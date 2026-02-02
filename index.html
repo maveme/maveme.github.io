@@ -7,6 +7,16 @@ title: Home
 
 <section class="post-list">
   <div class="container">
+    <h2 class="category-title">Sports Intelligence Lab</h2>
+    <p>
+      I am the founder of the <a href="https://sportsintelligencelab.com">Sports Intelligence Lab</a>, where we combine
+      computer vision, data science, and software engineering to solve problems in sports.
+      Check out our <a href="https://sportsintelligencelab.com">website</a> to learn more about our projects and
+      publications.
+    </p>
+    <hr>
+  </div>
+  <div class="container">
     <h2 class="category-title">Publications</h2>
     {% assign sorted = site.publications | sort: 'year' | reverse %}
     {% assign nyear = 2000%}
@@ -33,7 +43,9 @@ title: Home
       <article class="post-item">
         <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
         <li>
-          <div class="article-title"><a class="post-link" href="https://techxplore.com/news/2022-04-tools-languages-multiple-users.html">Creating tools to open up programming languages to multiple users</a></div>
+          <div class="article-title"><a class="post-link"
+              href="https://techxplore.com/news/2022-04-tools-languages-multiple-users.html">Creating tools to open up
+              programming languages to multiple users</a></div>
         </li>
       </article>
     </ul>
@@ -48,28 +60,30 @@ title: Home
     <h3 class="category-title">Master</h3>
     {% assign sorted = site.m_students | sort: 'year' | reverse %}
     {% for student in sorted %}
-      <div>
-        <article class="post-item">
-          <div class="article-title">
-            <a class="post-link" href="{{ student.url | prepend: site.baseurl | prepend: site.url }}">{{ student.short_title }}</a> <small class="block" style="font-size: 15px;">{{ student.name }}</small> 
-          </div>
-          <span class="post-meta date-label">{{ student.year }}</span>
-        </article>
-      </div>
-      {% endfor %}
+    <div>
+      <article class="post-item">
+        <div class="article-title">
+          <a class="post-link" href="{{ student.url | prepend: site.baseurl | prepend: site.url }}">{{
+            student.short_title }}</a> <small class="block" style="font-size: 15px;">{{ student.name }}</small>
+        </div>
+        <span class="post-meta date-label">{{ student.year }}</span>
+      </article>
+    </div>
+    {% endfor %}
     <!-- <h3 class="category-title">Bachelor</h3> -->
     {% assign sorted = site.b_students | sort: 'year' | reverse %}
     {% for student in sorted %}
-      <div>
-        <article class="post-item">
-          <div class="article-title">
-            <a class="post-link" href="{{ student.url | prepend: site.baseurl | prepend: site.url }}">{{ student.name }}</a>
-          </div>
-          <span class="post-meta date-label">{{ student.year }}</span>
-        </article>
-      </div>
-      {% endfor %}
-      <hr>
+    <div>
+      <article class="post-item">
+        <div class="article-title">
+          <a class="post-link" href="{{ student.url | prepend: site.baseurl | prepend: site.url }}">{{ student.name
+            }}</a>
+        </div>
+        <span class="post-meta date-label">{{ student.year }}</span>
+      </article>
+    </div>
+    {% endfor %}
+    <hr>
   </div>
 
   <div class="container">
@@ -77,72 +91,85 @@ title: Home
     <h3 class="category-title">Organizer</h2>
       <article class="post-item">
         <li>
-          <div class="article-title"><a class="post-link" href="https://2023.splashcon.org/home/paint-2023/">Programming Abstractions and Interactive Notations, Tools, and Environments</a></div>
+          <div class="article-title"><a class="post-link" href="https://2023.splashcon.org/home/paint-2023/">Programming
+              Abstractions and Interactive Notations, Tools, and Environments</a></div>
         </li>
       </article>
       <article class="post-item">
         <li>
-          <div class="article-title"><a class="post-link" href="https://conf.researchr.org/home/plnl-2023">Workshop on Programming Languages in The Netherlands</a></div>
+          <div class="article-title"><a class="post-link" href="https://conf.researchr.org/home/plnl-2023">Workshop on
+              Programming Languages in The Netherlands</a></div>
         </li>
       </article>
       <article class="post-item">
         <li>
-          <div class="article-title"><a class="post-link" href="https://www.versen.nl">VERSEN - Chair Working Group: Community Events</a></div>
+          <div class="article-title"><a class="post-link" href="https://www.versen.nl">VERSEN - Chair Working Group:
+              Community Events</a></div>
         </li>
       </article>
-    <h3 class="category-title">Reviewer</h2>
-    <ul>
-      <article class="post-item">
-        <li>
-          <div class="article-title"><a class="post-link" href="https://uist.acm.org/2023/">ACM Symposium on User Interface Software and Technology (UIST) 2023</a></div>
-        </li>
-      </article>
-      <article class="post-item">
-        <li>
-          <div class="article-title"><a class="post-link" href="https://chi2023.acm.org">ACM CHI Conference on Human Factors in Computing Systems 2023</a></div>
-        </li>
-      </article>
-      <article class="post-item">
-        <li>
-          <div class="article-title"><a class="post-link" href="https://www.journals.elsevier.com/science-of-computer-programming">Science of Computer Programming</a></div>
-        </li>
-      </article>
-      <article class="post-item">
-        <li>
-          <div class="article-title"><a class="post-link" href="https://chi2023.acm.org">ACM Conference on Human Factors in Computing Systems (CHI)</a></div>
-        </li>
-      </article>
-      <article class="post-item">
-        <li>
-          <div class="article-title"><a class="post-link" href="https://www.springer.com/journal/10664">Empirical Software Engineering (EMSE)</a></div>
-        </li>
-      </article>
-      <article class="post-item">
-      <li>
-        <div class="article-title"><a class="post-link" href="https://www.journals.elsevier.com/journal-of-systems-and-software">Journal of
-          Systems and Software (JSS)</a></div>
-      </li>
-    </article>
-    <article class="post-item">
-      <li>
-        <div class="article-title"><a class="post-link" href="https://www.springer.com/journal/10586">Journal of Cluster Computing, Networks, Software Tools and Applications</a></div>
-      </li>
-    </article>
-    <article class="post-item">
-      <li>
-        <div class="article-title"><a class="post-link" href="https://conf.researchr.org/home/sle-2021">Conference on Software Language Engineering (SLE)</a></div>
-      </li>
-    </article>
-    <article class="post-item">
-      <li><a class="post-link" href="http://www.modelsconference.org">International Conference on Model Driven
-          Engineering Languages and Systems (MODELS)</a></li>
-        </article>
-        <article class="post-item">
-      <li><a class="post-link" href="http://gemoc.org/events/mle2019.html">Workshop on Modeling Language Engineering and
-          Execution (MLE)</a></li>
-        </article>
-    </ul>
-    <hr>
+      <h3 class="category-title">Reviewer</h2>
+        <ul>
+          <article class="post-item">
+            <li>
+              <div class="article-title"><a class="post-link" href="https://uist.acm.org/2023/">ACM Symposium on User
+                  Interface Software and Technology (UIST) 2023</a></div>
+            </li>
+          </article>
+          <article class="post-item">
+            <li>
+              <div class="article-title"><a class="post-link" href="https://chi2023.acm.org">ACM CHI Conference on Human
+                  Factors in Computing Systems 2023</a></div>
+            </li>
+          </article>
+          <article class="post-item">
+            <li>
+              <div class="article-title"><a class="post-link"
+                  href="https://www.journals.elsevier.com/science-of-computer-programming">Science of Computer
+                  Programming</a></div>
+            </li>
+          </article>
+          <article class="post-item">
+            <li>
+              <div class="article-title"><a class="post-link" href="https://chi2023.acm.org">ACM Conference on Human
+                  Factors in Computing Systems (CHI)</a></div>
+            </li>
+          </article>
+          <article class="post-item">
+            <li>
+              <div class="article-title"><a class="post-link" href="https://www.springer.com/journal/10664">Empirical
+                  Software Engineering (EMSE)</a></div>
+            </li>
+          </article>
+          <article class="post-item">
+            <li>
+              <div class="article-title"><a class="post-link"
+                  href="https://www.journals.elsevier.com/journal-of-systems-and-software">Journal of
+                  Systems and Software (JSS)</a></div>
+            </li>
+          </article>
+          <article class="post-item">
+            <li>
+              <div class="article-title"><a class="post-link" href="https://www.springer.com/journal/10586">Journal of
+                  Cluster Computing, Networks, Software Tools and Applications</a></div>
+            </li>
+          </article>
+          <article class="post-item">
+            <li>
+              <div class="article-title"><a class="post-link" href="https://conf.researchr.org/home/sle-2021">Conference
+                  on Software Language Engineering (SLE)</a></div>
+            </li>
+          </article>
+          <article class="post-item">
+            <li><a class="post-link" href="http://www.modelsconference.org">International Conference on Model Driven
+                Engineering Languages and Systems (MODELS)</a></li>
+          </article>
+          <article class="post-item">
+            <li><a class="post-link" href="http://gemoc.org/events/mle2019.html">Workshop on Modeling Language
+                Engineering and
+                Execution (MLE)</a></li>
+          </article>
+        </ul>
+        <hr>
   </div>
 
   <div class="container">
@@ -157,7 +184,8 @@ title: Home
       <article class="post-item">
         <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
         <li>
-          <div class="article-title"><a class="post-link" href="https://github.com/koenvanwijk/blocklybench">Blocklybench</a></div>
+          <div class="article-title"><a class="post-link"
+              href="https://github.com/koenvanwijk/blocklybench">Blocklybench</a></div>
         </li>
       </article>
       <article class="post-item">
@@ -175,14 +203,16 @@ title: Home
       <article class="post-item">
         <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
         <li>
-          <div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/bacata/tree/master/rascal-notebook">Rascal notebooks</a>
+          <div class="article-title"><a class="post-link"
+              href="https://github.com/cwi-swat/bacata/tree/master/rascal-notebook">Rascal notebooks</a>
           </div>
         </li>
       </article>
       <article class="post-item">
         <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
         <li>
-          <div class="article-title"><a class="post-link" href="https://github.com/cwi-swat/rascal-minijava">MiniJava</a>
+          <div class="article-title"><a class="post-link"
+              href="https://github.com/cwi-swat/rascal-minijava">MiniJava</a>
           </div>
         </li>
       </article>
