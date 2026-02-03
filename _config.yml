@@ -13,7 +13,7 @@ author:
   email    : "" # Add your email if you want to be contactable
   bio      : "Assistant Professor in Computer Science at VU Amsterdam. Researcher in Software Language Engineering, Sports Analytics, and Conservation of Software-based Artworks."
   location : "Netherlands"
-  avatar   : "" # Add your avatar image URL
+  avatar   : "/assets/images/mauricio_verano.jpg" # Add your avatar image URL
   urls:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -36,7 +36,7 @@ social:
     username: "maveme"
 
 # Analytics
-google_analytics  : UA-175532612-1
+google_analytics  : "G-W6ELQD8SLM"
 # twitter_username  : "MauricioVerano"
 comments_enabled  : false # if enabled (set to true), please provide your disqus_username
 disqus_shortname  : ""

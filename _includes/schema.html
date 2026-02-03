@@ -1,5 +1,5 @@
 {% comment %}
-  Person Schema
+Person Schema
 {% endcomment %}
 <script type="application/ld+json">
 {
@@ -12,14 +12,21 @@
     "https://linkedin.com/in/{{ site.social.linkedin.username }}",
     "https://twitter.com/{{ site.social.twitter.username }}"
   ],
-  "jobTitle": "Researcher",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Eindhoven University of Technology",
-    "url": "https://www.tue.nl"
-  },
+  "jobTitle": "Assistant Professor",
+  "worksFor": [
+    {
+      "@type": "Organization",
+      "name": "VU Amsterdam",
+      "url": "https://vu.nl"
+    },
+    {
+      "@type": "Organization",
+      "name": "Eindhoven University of Technology",
+      "url": "https://www.tue.nl"
+    }
+  ],
   "description": "{{ site.author.bio }}",
-  "image": "{{ site.author.avatar }}",
+  "image": "{{ site.url }}{{ site.author.avatar }}",
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "{{ site.author.location }}"
@@ -28,24 +35,24 @@
 </script>
 
 {% comment %}
-  Organization Schema
+Organization Schema
 {% endcomment %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Eindhoven University of Technology",
-  "url": "https://www.tue.nl",
-  "logo": "https://www.tue.nl/favicon.ico",
+  "name": "VU Amsterdam",
+  "url": "https://vu.nl",
+  "logo": "https://vu.nl/favicon.ico",
   "sameAs": [
-    "https://www.linkedin.com/school/eindhoven-university-of-technology/",
-    "https://twitter.com/TUeindhoven"
+    "https://www.linkedin.com/school/vu-amsterdam/",
+    "https://twitter.com/vuamsterdam"
   ]
 }
 </script>
 
 {% comment %}
-  Website Schema
+Website Schema
 {% endcomment %}
 <script type="application/ld+json">
 {
@@ -62,7 +69,7 @@
 </script>
 
 {% comment %}
-  ScholarlyArticle Schema for Publications
+ScholarlyArticle Schema for Publications
 {% endcomment %}
 {% if page.layout == 'publication' %}
 <script type="application/ld+json">
@@ -87,4 +94,4 @@
   "url": "{{ site.url }}{{ page.url }}"
 }
 </script>
-{% endif %} 
+{% endif %}
