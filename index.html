@@ -17,8 +17,12 @@ title: Mauricio Verano Merino - Assistant Professor in Computer Science & Sports
     <hr>
   </div>
   <div class="container">
-    <h2 class="category-title">Publications</h2>
-    {% assign sorted = site.publications | sort: 'year' | reverse %}
+    <details>
+      <summary style="cursor: pointer; outline: none; list-style-position: inside;">
+        <h2 class="category-title" style="display: inline-block; margin-bottom: 0;">Publications</h2>
+      </summary>
+      <div style="margin-top: 15px;">
+        {% assign sorted = site.publications | sort: 'year' | reverse %}
     {% assign nyear = 2000%}
     {% for post in sorted %}
     {% capture year %}{{ post.year }}{% endcapture %}
@@ -35,7 +39,9 @@ title: Mauricio Verano Merino - Assistant Professor in Computer Science & Sports
         </article>
       </div>
       {% endfor %}
-      <hr>
+      </div>
+    </details>
+    <hr>
   </div>
   <div class="container">
     <h2 class="category-title">Press</h2>
