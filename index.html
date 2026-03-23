@@ -23,38 +23,44 @@ title: Mauricio Verano Merino - Assistant Professor in Computer Science & Sports
       </summary>
       <div style="margin-top: 15px;">
         {% assign sorted = site.publications | sort: 'year' | reverse %}
-    {% assign nyear = 2000%}
-    {% for post in sorted %}
-    {% capture year %}{{ post.year }}{% endcapture %}
-    {% if year != nyear %}
-    {% assign nyear = year%}
-    <h3 class="category-title">{{ post.year }}</h2>
-      {% endif %}
-      <div>
-        <article class="post-item">
-          <div class="article-title">
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
+        {% assign nyear = 2000%}
+        {% for post in sorted %}
+        {% capture year %}{{ post.year }}{% endcapture %}
+        {% if year != nyear %}
+        {% assign nyear = year%}
+        <h3 class="category-title">{{ post.year }}</h2>
+          {% endif %}
+          <div>
+            <article class="post-item">
+              <div class="article-title">
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title
+                  }}</a>
+              </div>
+              <span class="post-meta date-label">{{ post.acro }}</span>
+            </article>
           </div>
-          <span class="post-meta date-label">{{ post.acro }}</span>
-        </article>
-      </div>
-      {% endfor %}
+          {% endfor %}
       </div>
     </details>
     <hr>
   </div>
   <div class="container">
-    <h2 class="category-title">Press</h2>
-    <ul>
-      <article class="post-item">
-        <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
-        <li>
-          <div class="article-title"><a class="post-link"
-              href="https://techxplore.com/news/2022-04-tools-languages-multiple-users.html">Creating tools to open up
-              programming languages to multiple users</a></div>
-        </li>
-      </article>
-    </ul>
+    <details>
+      <summary style="cursor: pointer; outline: none; list-style-position: inside;">
+        <h2 class="category-title" style="display: inline-block; margin-bottom: 0;">Press</h2>
+      </summary>
+      <div style="margin-top: 15px;">
+        <ul>
+          <article class="post-item">
+            <li>
+              <div class="article-title"><a class="post-link"
+                  href="https://techxplore.com/news/2022-04-tools-languages-multiple-users.html">Creating tools to open up
+                  programming languages to multiple users</a></div>
+            </li>
+          </article>
+        </ul>
+      </div>
+    </details>
     <hr>
   </div>
 
@@ -62,8 +68,12 @@ title: Mauricio Verano Merino - Assistant Professor in Computer Science & Sports
   {% include teaching.html %}
 
   <div class="container">
-    <h2 class="category-title">Students</h2>
-    <h3 class="category-title">Master</h3>
+    <details>
+      <summary style="cursor: pointer; outline: none; list-style-position: inside;">
+        <h2 class="category-title" style="display: inline-block; margin-bottom: 0;">Students</h2>
+      </summary>
+      <div style="margin-top: 15px;">
+        <h3 class="category-title">Master</h3>
     {% assign sorted = site.m_students | sort: 'year' | reverse %}
     {% for student in sorted %}
     <div>
@@ -89,12 +99,18 @@ title: Mauricio Verano Merino - Assistant Professor in Computer Science & Sports
       </article>
     </div>
     {% endfor %}
+      </div>
+    </details>
     <hr>
   </div>
 
   <div class="container">
-    <h2 class="category-title">Academic services</h2>
-    <h3 class="category-title">Organizer</h2>
+    <details>
+      <summary style="cursor: pointer; outline: none; list-style-position: inside;">
+        <h2 class="category-title" style="display: inline-block; margin-bottom: 0;">Academic services</h2>
+      </summary>
+      <div style="margin-top: 15px;">
+        <h3 class="category-title">Organizer</h2>
       <article class="post-item">
         <li>
           <div class="article-title"><a class="post-link" href="https://2023.splashcon.org/home/paint-2023/">Programming
@@ -175,12 +191,18 @@ title: Mauricio Verano Merino - Assistant Professor in Computer Science & Sports
                 Execution (MLE)</a></li>
           </article>
         </ul>
-        <hr>
+      </div>
+    </details>
+    <hr>
   </div>
 
   <div class="container">
-    <h2 class="category-title">Tools</h2>
-    <ul>
+    <details>
+      <summary style="cursor: pointer; outline: none; list-style-position: inside;">
+        <h2 class="category-title" style="display: inline-block; margin-bottom: 0;">Tools</h2>
+      </summary>
+      <div style="margin-top: 15px;">
+        <ul>
       <article class="post-item">
         <!-- <span class="post-meta date-label">{{ post.year }}</span> -->
         <li>
@@ -230,12 +252,18 @@ title: Mauricio Verano Merino - Assistant Professor in Computer Science & Sports
         </li>
       </article>
     </ul>
+      </div>
+    </details>
     <hr>
   </div>
 
   <div class="container">
-    <h2 class="category-title">Talks</h2>
-    <ul>
+    <details>
+      <summary style="cursor: pointer; outline: none; list-style-position: inside;">
+        <h2 class="category-title" style="display: inline-block; margin-bottom: 0;">Talks</h2>
+      </summary>
+      <div style="margin-top: 15px;">
+        <ul>
       <article class="post-item">
         <li>
           <div class="article-title">Language-Parametric User Interfaces for DSLs. <a class="post-link"
@@ -275,6 +303,8 @@ title: Mauricio Verano Merino - Assistant Professor in Computer Science & Sports
         </li>
       </article>
     </ul>
+      </div>
+    </details>
     <hr>
   </div>
 
