@@ -20,6 +20,24 @@ title: Mauricio Verano Merino - Assistant Professor in Computer Science & Sports
     <details>
       <summary style="cursor: pointer; outline: none; list-style-position: inside;">
         <h2 class="category-title" style="display: inline-block; margin-bottom: 0;">Publications</h2>
+        {% assign sorted = site.publications | sort: 'year' | reverse %}
+        {% assign nyear = 2026%}
+        {% for post in sorted %}
+        {% capture year %}{{ post.year }}{% endcapture %}
+        {% if post.year == nyear %}
+        <h3 class="category-title">{{ post.year }}</h2>
+          <div>
+            <article class="post-item">
+              <div class="article-title">
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title
+                  }}</a>
+              </div>
+              <span class="post-meta date-label">{{ post.acro }}</span>
+            </article>
+          </div>
+          {% endif %}
+          {% endfor %}
+
       </summary>
       <div style="margin-top: 15px;">
         {% assign sorted = site.publications | sort: 'year' | reverse %}
