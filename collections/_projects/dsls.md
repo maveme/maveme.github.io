@@ -2,7 +2,7 @@
 layout: page
 title: LLMs as User Interfaces for Domain-Specific Languages (DSLs)
 level: Masters CS or AI
-authors: Mauricio Verano Merino, Forward.Football
+authors: Mauricio Verano Merino, TNO-ESI
 type: Graduation project
 
 ---
