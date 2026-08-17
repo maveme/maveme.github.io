@@ -26,6 +26,48 @@ title: Mauricio Verano Merino - Assistant Professor in Computer Science & Sports
     <hr>
   </div> -->
   <div class="container">
+    <h2 class="category-title">Research Pillars</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <h3 class="pillar-title">Tools &amp; Environments for Creative Expression &amp; Interaction</h3>
+        <p>Designing programming tools and environments that support artists, musicians, and creative coders through their exploratory process.</p>
+        {% assign pillar1 = "CHI'23,SEGA-FSE'26,SLE'20,MSR'25" | split: "," %}
+        {% for acro in pillar1 %}
+        {% assign post = site.publications | where: "acro", acro | first %}
+        {% if post %}
+        <div>
+          <article class="post-item">
+            <div class="article-title">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
+            </div>
+            <span class="post-meta date-label">{{ post.acro }}</span>
+          </article>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <div class="pillar">
+        <h3 class="pillar-title">Domain-Specific Languages &amp; Language Engineering</h3>
+        <p>Building language-parametric infrastructure that lets language designers generate notebooks, block-based editors, and other interfaces from a single grammar.</p>
+        {% assign pillar2 = "Programming,SLE'21,VL/HCC'22" | split: "," %}
+        {% for acro in pillar2 %}
+        {% assign post = site.publications | where: "acro", acro | first %}
+        {% if post %}
+        <div>
+          <article class="post-item">
+            <div class="article-title">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
+            </div>
+            <span class="post-meta date-label">{{ post.acro }}</span>
+          </article>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
     <details>
       <summary style="cursor: pointer; outline: none; list-style-position: inside;">
         <h2 class="category-title" style="display: inline-block; margin-bottom: 0;">Publications</h2>

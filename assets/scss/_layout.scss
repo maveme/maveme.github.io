@@ -134,6 +134,30 @@ hr {
   }
 }
 
+.pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $base-spacing;
+  margin-bottom: $small-spacing;
+}
+
+.pillar {
+  flex: 1 1 300px;
+  min-width: 260px;
+
+  p {
+    color: $medium-gray-color;
+    font-size: rem(14);
+    margin-bottom: 0.8em;
+  }
+}
+
+.pillar-title {
+  font-size: rem(16);
+  margin: 0 0 0.5em 0;
+  color: $dark-gray-color;
+}
+
 .post-item {
   margin-bottom: 0.2em;
   display: block;
