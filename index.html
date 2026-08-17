@@ -31,7 +31,7 @@ title: Mauricio Verano Merino - Assistant Professor in Computer Science & Sports
       <div class="pillar">
         <h3 class="pillar-title">Tools &amp; Environments for Creative Expression &amp; Interaction</h3>
         <p>Designing programming tools and environments that support artists, musicians, and creative coders through their exploratory process.</p>
-        {% assign pillar1 = "CHI'23,SEGA-FSE'26,SLE'20,MSR'25" | split: "," %}
+        {% assign pillar1 = "CHI'23,SEGA-FSE'26,MSR'25,SLE'20" | split: "," %}
         {% for acro in pillar1 %}
         {% assign post = site.publications | where: "acro", acro | first %}
         {% if post %}
@@ -72,9 +72,10 @@ title: Mauricio Verano Merino - Assistant Professor in Computer Science & Sports
       <summary style="cursor: pointer; outline: none; list-style-position: inside;">
         <h2 class="category-title" style="display: inline-block; margin-bottom: 0;">Publications</h2>
         {% assign sorted = site.publications | sort: 'year' | reverse %}
+        {% assign latest_year = sorted.first.year %}
+        <h3 class="category-title">Latest</h3>
         {% for post in sorted %}
-        {% if post.year == 2026 %}
-        <h3 class="category-title">Latest</h2>
+        {% if post.year == latest_year %}
           <div>
             <article class="post-item">
               <div class="article-title">
@@ -86,7 +87,6 @@ title: Mauricio Verano Merino - Assistant Professor in Computer Science & Sports
           </div>
           {% endif %}
           {% endfor %}
-
       </summary>
       <div style="margin-top: 15px;">
         {% assign sorted = site.publications | sort: 'year' | reverse %}
