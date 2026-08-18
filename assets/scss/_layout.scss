@@ -134,6 +134,31 @@ hr {
   }
 }
 
+details summary {
+  list-style: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    margin-right: 0.7em;
+    border-right: 2px solid $dark-gray-color;
+    border-bottom: 2px solid $dark-gray-color;
+    transform: rotate(-45deg);
+    transition: transform $base-duration $base-timing;
+    vertical-align: middle;
+  }
+}
+
+details[open] summary::before {
+  transform: rotate(45deg);
+}
+
 .pillars {
   display: flex;
   flex-wrap: wrap;
@@ -146,7 +171,7 @@ hr {
   min-width: 260px;
 
   p {
-    color: $light-pink-color;
+    color: $medium-gray-color;
     font-size: rem(14);
     margin-bottom: 0.8em;
     text-align: right;
