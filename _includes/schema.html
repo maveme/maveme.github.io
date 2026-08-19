@@ -13,16 +13,21 @@ Person Schema
     "https://twitter.com/{{ site.social.twitter.username }}"
   ],
   "jobTitle": "Assistant Professor",
-  "worksFor": [
-    {
-      "@type": "Organization",
-      "name": "VU Amsterdam",
-      "url": "https://vu.nl"
-    },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "VU Amsterdam",
+    "url": "https://vu.nl"
+  },
+  "affiliation": [
     {
       "@type": "Organization",
       "name": "Eindhoven University of Technology",
       "url": "https://www.tue.nl"
+    },
+    {
+      "@type": "Organization",
+      "name": "Centrum Wiskunde & Informatica (CWI)",
+      "url": "https://www.cwi.nl"
     }
   ],
   "description": "{{ site.author.bio }}",
@@ -31,23 +36,6 @@ Person Schema
     "@type": "PostalAddress",
     "addressCountry": "{{ site.author.location }}"
   }
-}
-</script>
-
-{% comment %}
-Organization Schema
-{% endcomment %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "VU Amsterdam",
-  "url": "https://vu.nl",
-  "logo": "https://vu.nl/favicon.ico",
-  "sameAs": [
-    "https://www.linkedin.com/school/vu-amsterdam/",
-    "https://twitter.com/vuamsterdam"
-  ]
 }
 </script>
 
